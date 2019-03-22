@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.collections.*?>
+
+<!-- never forget the fx:controller -->
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Win1Controller">
+  <tabs>
+    <Tab text="Links">
+         <content>
+            <BorderPane fx:id="bp" prefHeight="371.0" prefWidth="644.0">
+               <center>
+                  <VBox prefHeight="340.0" prefWidth="440.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Address:">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="address" prefHeight="25.0" prefWidth="208.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Label text="Description" />
+                        <TextArea fx:id="descr" editable="false" prefHeight="244.0" prefWidth="300.0" promptText="Description" text="&#10;" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets right="5.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+               <right>
+                  <VBox prefHeight="361.0" prefWidth="95.0" spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Actions" />
+                        <TextField promptText="Search for keyword" text="Search" />
+                        <Button mnemonicParsing="false" text="Search" />
+                        <ComboBox fx:id="actionCombo" prefWidth="150.0" promptText="">
+                        	<items>
+                        		<FXCollections fx:factory="observableArrayList">
+                        			 <String fx:value=""/>
+                        			<String fx:value="New" />
+                        			<String fx:value="Edit" />
+                        			<String fx:value="Delete" />
+                        		</FXCollections>
+                        	</items>
+                        </ComboBox>
+                        <Button mnemonicParsing="false" text="Update" visible="false">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </right>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <left>
+                 <VBox prefHeight="300.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+                  	<children>
+                  		<fx:include source="Table.fxml" /><!-- done by hand -->
+                  	</children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                   </VBox>
+               </left>
+            </BorderPane>
+         </content>
+    </Tab>
+    <Tab text="Logins">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" />
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>

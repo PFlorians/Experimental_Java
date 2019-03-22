@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="bp" prefHeight="439.0" prefWidth="703.0" styleClass="general" stylesheets="@../style/config.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ConfigController">
+   <right>
+      <VBox prefHeight="414.0" prefWidth="167.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="supertext" text="System Details:">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TextArea fx:id="sysDetails" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="txtFields" />
+            <Button fx:id="sac" disable="true" mnemonicParsing="false" onAction="#saveAndClose" styleClass="bttns" text="Save and Close">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <GridPane hgap="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="404.0" prefWidth="502.0" styleClass="grids" BorderPane.alignment="TOP_CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="178.0" minWidth="10.0" prefWidth="178.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="149.0" minWidth="10.0" prefWidth="134.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="160.0" minWidth="10.0" prefWidth="145.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="321.0" minHeight="10.0" prefHeight="291.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="20.0" prefWidth="172.0" styleClass="supertext" text="Webserver Location">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="location1Text" disable="true" styleClass="txtFields" GridPane.columnIndex="1" />
+            <Button fx:id="location1" mnemonicParsing="false" onAction="#openFileChooserLocation1" styleClass="bttns" text="Choose" GridPane.columnIndex="2" />
+            <Label styleClass="supertext" text="Database Path" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TextField fx:id="location2Text" disable="true" styleClass="txtFields" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="location2" mnemonicParsing="false" onAction="#openFileChooserLocation2" styleClass="bttns" text="Choose" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label styleClass="supertext" text="Optional" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="157.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="astart" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" prefHeight="30.0" prefWidth="148.0" styleClass="bttns" text="Select script" />
+                  <Button fx:id="astop" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" prefHeight="30.0" prefWidth="145.0" styleClass="bttns" text="Select script" />
+                  <Button fx:id="dbstart" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" styleClass="bttns" text="Select" />
+                  <Button fx:id="dbstop" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" styleClass="bttns" text="Select" />
+                  <Button fx:id="msqlstart" disable="true" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" opacity="0.0" text="Select" />
+                  <Button fx:id="msqlstop" disable="true" mnemonicParsing="false" onAction="#universalOpenFileChooserLocation" opacity="0.0" text="Select" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="45.0" />
+               </padding></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="3">
+               <children>
+                  <Label styleClass="supertext" text="Database Type">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="supertext" text="Apache start">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="supertext" text="Apache stop">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="supertext" text="DB start">
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="supertext" text="DB stop">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                  </Label>
+                  <Label disable="true" opacity="0.0" text="mysql start">
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label disable="true" opacity="0.0" text="mysql stop">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="11.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ComboBox prefWidth="150.0" styleClass="txtFields" />
+                  <TextField fx:id="astartText" styleClass="txtFields">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="astopText" styleClass="txtFields">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="dbstartText" styleClass="txtFields">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="dbstopText" styleClass="txtFields">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="msqlstartText" disable="true" opacity="0.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="msqlstopText" disable="true" opacity="0.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <MenuBar styleClass="coolMenu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Advanced" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

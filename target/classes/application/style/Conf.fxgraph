@@ -1,0 +1,9 @@
+package application.style
+
+import javafx.scene.layout.BorderPane
+
+component Conf {
+	BorderPane {
+		//TODO Add Nodes
+	}
+}

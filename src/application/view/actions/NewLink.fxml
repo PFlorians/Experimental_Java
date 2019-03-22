@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<!-- samo si to vytvori novu instanciu Win1Controller takze premenne treba znovu inicializovat -->
+<BorderPane fx:id="newLink" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Win1Controller">
+   <center>
+      <VBox maxWidth="300.0" prefHeight="380.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="URL:" />
+            <TextField fx:id="url" promptText="Must not be empty" />
+            <Label text="Genre: "/>
+            <TextField fx:id="zaner" promptText="Must not be empty" />
+            <Label text="Description" />
+            <TextArea fx:id="descr" prefHeight="200.0" prefWidth="200.0" promptText="Must not be empty" />
+            <Button fx:id="sub1" mnemonicParsing="false" onAction="#newSubDone" text="Submit">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

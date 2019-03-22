@@ -1,0 +1,39 @@
+.supertext {
+	-fx-font-family: 'Consolas';
+	-fx-font-weight: 'bold';
+	-fx-font-size: 16px;
+	-fx-text-fill: #42f442;
+	-fx-effect: dropshadow(three-pass-box, black, 15, 0.75, 5, 2);
+}
+
+.grids{
+	-fx-border-color: #14e8e8;
+	-fx-border-width: 2px;
+	-fx-border-style: 'solid,round';
+	 
+}
+.coolMenu{
+	-fx-opacity: 0.7;
+	visibility: 0.5;
+	-fx-font-family: 'Consolas';
+	-fx-font-weight: 'bold';
+	-fx-font-size: 16px;
+	-fx-text-fill: #42f442;
+}
+.general {
+	-fx-background-image: url("img/grid.png");
+}
+.txtFields{
+	-fx-font-family: 'Consolas';
+	-fx-font-weight: 'bold';
+	-fx-font-size: 16px;
+	-fx-text-fill: #d40be2;
+	-fx-background-color: #010230;
+}
+.bttns{
+	-fx-font-family: 'Consolas';
+	-fx-font-weight: 'bold';
+	-fx-font-size: 16px;
+	-fx-text-fill:linear-gradient(from 0% 0% to 100% 100%, #ffc700 0%, #bfff00 20%, #00ff04 40%, #00ffe1 60%, #d800ff 80%, #e900ff 100%);
+	-fx-background-color: #000000;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="bp" prefHeight="551.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.GraphicsController">
+   <right>
+      <VBox prefHeight="526.0" prefWidth="181.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Choose rotation axis" />
+            <Label text="X-axis" />
+            <Slider fx:id="rotation_slidex" majorTickUnit="90.0" max="360.0" onMouseClicked="#rotated" onMouseDragged="#rotated" onScroll="#rotated" showTickLabels="true" showTickMarks="true" />
+            <Label text="Y-axis" />
+            <Slider fx:id="rotation_slidey" majorTickUnit="90.0" max="360.0" onMouseClicked="#rotated" onMouseDragged="#rotated" onScroll="#rotated" showTickLabels="true" showTickMarks="true" />
+            <Label text="Z-axis" />
+            <Slider fx:id="rotation_slidez" majorTickUnit="90.0" max="360.0" onMouseClicked="#rotated" onMouseDragged="#rotated" onScroll="#rotated" showTickLabels="true" showTickMarks="true" />
+            <Label fx:id="val_sl" text="Label" />
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
